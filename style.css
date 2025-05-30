@@ -493,3 +493,78 @@ footer li {
     top: 31px;
   }
 }
+
+
+#comment-section {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.comment-box {
+  background: #1e1e1e;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease;
+}
+
+.comment-box.new {
+  animation: fadeInSlide 0.5s ease;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nama {
+  font-weight: bold;
+  color: #42a5f5;
+}
+
+.waktu {
+  font-size: 0.8em;
+  color: #bbb;
+}
+
+.input-area {
+  padding: 15px;
+  background: #1a1a1a;
+  border-top: 1px solid #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 8px;
+  background: #2c2c2c;
+  color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: var(--pink);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--pink);
+}
