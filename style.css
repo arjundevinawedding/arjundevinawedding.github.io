@@ -504,7 +504,7 @@ footer li {
 }
 
 .comment-box {
-  background: #1e1e1e;
+  background: #fff;
   padding: 10px 15px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -530,11 +530,7 @@ footer li {
 
 .namekomen {
   font-weight: bold;
-  color: #42a5f5;
-}
-
-.komentar {
-  color: #fff;
+  color: var(--pink);
 }
 
 .waktu {
