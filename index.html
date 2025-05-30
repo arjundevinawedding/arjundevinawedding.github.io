@@ -352,7 +352,7 @@
         <div id="comment-section"></div>
 
         <div class="input-area">
-        <input type="text" id="nama" placeholder="Nama Anda" />
+        <input type="text" id="namekomen" placeholder="Nama Anda" />
         <textarea id="komentar" rows="3" placeholder="Tulis ucapan terbaikmu..."></textarea>
         <button onclick="kirimKomentar()">Kirim Ucapan</button>
       </div>
@@ -449,7 +449,7 @@
         const div = document.createElement("div");
         div.className = "comment-box";
         div.innerHTML = `
-          <div class="nama">${k.nama} <span class="waktu">• ${k.waktu}</span></div>
+          <div class="namekomen">${k.nama} <span class="waktu">• ${k.waktu}</span></div>
           <div class="isi">${k.isi}</div>
         `;
         if (animasiTerakhir && k === animasiTerakhir) {
@@ -460,7 +460,7 @@
     }
 
     function kirimKomentar() {
-      const nama = document.getElementById("nama").value.trim();
+      const nama = document.getElementById("namekomen").value.trim();
       const isi = document.getElementById("komentar").value.trim();
 
       if (!nama || !isi) {
@@ -484,7 +484,7 @@
       semuaKomentar.push(komentarBaru);
       simpanKomentar(semuaKomentar);
 
-      document.getElementById("nama").value = "";
+      document.getElementById("namekomen").value = "";
       document.getElementById("komentar").value = "";
 
       tampilkanKomentar(komentarBaru);
