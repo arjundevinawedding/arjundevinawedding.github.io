@@ -449,7 +449,7 @@
         const div = document.createElement("div");
         div.className = "comment-box";
         div.innerHTML = `
-          <div class="nama">${k.nama} <span class="waktu">• ${k.waktu}</span></div>
+          <div class="namekomen">${k.namekomen} <span class="waktu">• ${k.waktu}</span></div>
           <div class="isi">${k.isi}</div>
         `;
         if (animasiTerakhir && k === animasiTerakhir) {
@@ -460,23 +460,23 @@
     }
 
     function kirimKomentar() {
-      const nama = document.getElementById("namekomen").value.trim();
+      const namekomen = document.getElementById("namekomen").value.trim();
       const isi = document.getElementById("komentar").value.trim();
 
-      if (!nama || !isi) {
+      if (!namekomen|| !isi) {
         alert("Harap isi nama dan komentar.");
         return;
       }
 
       const semuaKomentar = ambilKomentar();
-      const jumlahUcapan = semuaKomentar.filter(k => k.nama === nama).length;
+      const jumlahUcapan = semuaKomentar.filter(k => k.namekomen === namekomen).length;
       if (jumlahUcapan >= 2) {
         alert("Maaf, Anda hanya bisa mengirim maksimal 2 ucapan.");
         return;
       }
 
       const komentarBaru = {
-        nama,
+        namekomen,
         isi,
         waktu: waktuSekarang()
       };
